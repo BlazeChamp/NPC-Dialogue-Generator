@@ -23,3 +23,5 @@ The NPC is set to "Elara, a wise and kind sorceress from Skyrim" by default. The
 As coversations continue, the AI gets a better idea of how to conversate as it keeps a running log of the conversation.  
 
 This program was run in Visual Studio 2022 with python in a single solution
+
+Make sure all main.py dialogueEngine.py, and data are in the same folder and then run main.py using python. (e.g. python main.py)

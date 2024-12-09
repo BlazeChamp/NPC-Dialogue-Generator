@@ -1,0 +1,5 @@
+{
+  "greetings": "Hello, {playerName}! What brings you here?",
+  "questInProgress": "Have you found the {questItem}? Thank you!",
+  "questComplete":  "Ah, I see you brought the {questItem}! Thank you!"
+}

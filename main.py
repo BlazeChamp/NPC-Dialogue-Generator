@@ -18,21 +18,21 @@ if __name__ == "__main__":
         if "my name is" in player_input.lower():
             user_name = player_input.split("is")[-1].strip()
             npc.update_memory("facts", {"Your name": user_name})
-            print("Elara: Ah, I see. I will remember your name.")
+            print(f"{npc.npc_name}: Ah, I see. I will remember your name.")
             continue
 
         elif "I like" in player_input.lower():
             user_preference = player_input.split("I like")[-1].strip()
             npc.update_memory("user_preferences", {user_preference: "liked"})
-            print("Elara: Interesting, I will keep that in mind.")
+            print(f"{npc.npc_name}: Interesting, I will keep that in mind.")
             continue
 
         elif "remember" in player_input.lower():
             memory_content = npc.retrieve_memory("facts")
             if memory_content:
-                print(f"Elara: I recall this: {memory_content}")
+                print(f"{npc.npc_name}: I recall this: {memory_content}")
             else:
-                print("Elara: I'm afraid I don't recall anything specific yet.")
+                print(f"{npc.npc_name}: I'm afraid I don't recall anything specific yet.")
             continue
         npc_response = npc.get_response(player_input)
         print(f"{npc.npc_name}: {npc_response}")

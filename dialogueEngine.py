@@ -134,12 +134,11 @@ class NPCDialogueGenerator:
         except Exception as e:
             print(f"Error generating local response: {e}")
             return "I cannot respond right now."
-
+ 
     def get_response(self, player_input):
         response = self.generate_local_response(player_input)
         self.update_memory("previous_topics", player_input)
         return response
-
 
     def generate_ai_response(self, player_input):
         """Generate a dynamic response using OpenAI."""
